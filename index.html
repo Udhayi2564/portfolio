@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Udhaya Kumar - Portfolio</title>
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Navbar */
+    nav {
+      background: #2c3e50;
+      padding: 15px 0;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a {
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #1abc9c;
+      border-radius: 5px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-top: 120px;
+      margin-bottom: 50px;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      color: #2980b9;
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+    }
+
+    header h3 {
+      font-weight: normal;
+      color: #555;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    /* Paragraphs */
+    section p {
+      text-align: justify;
+      margin-top: 10px;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #2980b9;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    /* Contact Buttons */
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .contact-buttons a {
+      padding: 12px 25px;
+      background: #2980b9;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .contact-buttons a:hover {
+      background: #1abc9c;
+      transform: scale(1.05);
+    }
+
+    /* Contact Form */
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: #2980b9;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+      display: block;
+      margin: auto;
+    }
+
+    form button:hover {
+      background: #1abc9c;
+      transform: scale(1.05);
+    }
+
+    /* Projects Section */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card h4 {
+      color: #2980b9;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: justify;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 50px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+ <div class="container"> 
+        <header> 
+            <img src="profile.jpg" alt="Profile Picture" class="profile-image"  
+                 style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;"> <!-- Inline CSS --> 
+
+            <h1 style="color: #2980b9;">UDHAYA KUMAR K G</h1> <!-- Inline CSS --> 
+
+            <div class="hover-paragraph"> 
+                <p>Welcome to my portfolio! Here you will find details about my 
+academic achievements, skills, certifications, and projects. Feel free to explore 
+and connect with me.</p> 
+            </div> 
+        </header> 
+    </header>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3 class="section-title">Contact Information</h3>
+
+      <div class="contact-buttons">
+        <a href="tel:6380807805">📞 Call Me</a>
+        <a href="mailto:udhayi2564@gmail.com">✉️ Send Email</a>
+        <a href="https://www.linkedin.com/in/udhaya-kumar-kg-2a5370330" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/udhaya" target="_blank">💻 GitHub</a>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <h3 class="section-title">About Me</h3>
+      <p>
+        I am currently in my 3rd year of B.Tech in Artificial Intelligence and Data Science 
+        at KPR Institute of Engineering and Technology (KPRIET), with a diploma in ECE from 
+        CIT Sandwich Polytechnic College. I specialize in AI, ML, and embedded IoT solutions. 
+        I’m passionate about creating innovative tech solutions with real-world impact.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h3 class="section-title">Education</h3>
+      <table>
+        <tr>
+          <th>Degree</th>
+          <th>Institute</th>
+          <th>Year</th>
+        </tr>
+        <tr>
+          <td>B.Tech AI & DS</td>
+          <td>KPRIET</td>
+          <td>Graduating 2027</td>
+        </tr>
+        <tr>
+          <td>Diploma in ECE</td>
+          <td>CIT Sandwich Polytechnic College</td>
+          <td>2024</td>
+        </tr>
+        <tr>
+          <td>SSLC</td>
+          <td>Wisdom Matric HR Sec School</td>
+          <td>2021</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h3 class="section-title">Skills</h3>
+      <ul>
+        <li>Embedded C, Python, Java</li>
+        <li>AI/ML: Classification, Regression, Object Detection</li>
+        <li>Frontend: React, HTML, CSS, Tailwind</li>
+        <li>Backend: FastAPI, Node.js, Django</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h3 class="section-title">Projects</h3>
+      <div class="projects-container">
+        <div class="project-card">
+          <h4>HRNG-Based ATM Security System</h4>
+          <p>Designed a secure ATM authentication system using hardware random number generation to 
+             enhance security and prevent unauthorized access.</p>
+        </div>
+        <div class="project-card">
+          <h4>Home Security & Alert System using AI</h4>
+          <p>Developed a smart home monitoring solution with AI-based motion detection and 
+             instant alerts for suspicious activities.</p>
+        </div>
+        <div class="project-card">
+          <h4>EV Fire Suppression System (IoT)</h4>
+          <p>Built an IoT-enabled fire detection and suppression system for electric vehicles 
+             ensuring passenger safety and system reliability.</p>
+        </div>
+        <div class="project-card">
+          <h4>Crime Classification using ML</h4>
+          <p>Implemented a machine learning model to classify crime patterns and assist law 
+             enforcement with predictive analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h3 class="section-title">Services</h3>
+      <ul>
+        <li>Model Development & Deployment</li>
+        <li>IoT Hardware Integration</li>
+        <li>Frontend Development</li>
+        <li>Backend APIs</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h3 class="section-title">Contact Me</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Your Phone Number" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Udhaya Kumar. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
